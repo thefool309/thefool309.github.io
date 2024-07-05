@@ -1,8 +1,18 @@
 body {
-    background-color: darkblue;
+    background-color: rgb(64, 64, 68);
 }
 
 h1{
     color: azure;
-    margin-left: 20px;
+    margin-left: 25px;
+    font-family:'Courier New', Courier, monospace;
 }
+
+p {
+    color: azure;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-top: 5px;
+    font-family:'Courier New', Courier, monospace;
+}
+

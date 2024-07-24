@@ -8,7 +8,6 @@ h1{
     font-family:'Courier New', Courier, monospace;
     text-decoration-line: underline;
 }
-
 p {
     color: azure;
     margin-left: 25px;
@@ -17,3 +16,81 @@ p {
     font-family:'Courier New', Courier, monospace;
 }
 
+a {
+    color:chartreuse
+}
+
+.VelmaImageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+   
+.VelmaImageGallery img {
+    width: 50%; /* adjust the width based on your needs */
+    margin: 10px
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+   
+   /* Use media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+  .VelmaImageGallery img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .VelmaImageGallery img {
+    width: 60%;
+  }
+}
+
+.NPCImageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.NPCImageGallery img {
+    width: 50%; 
+    margin: 10px
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Use media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+  .NPCImageGallery img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+ .NPCImageGallery img {
+   width: 60%;
+ }
+ }
+
+.GOLImageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+   
+.GOLImageGallery img {
+    width: 50%; /* adjust the width based on your needs */
+    margin: 10px
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+   
+   /* Use media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+  .GOLImageGallery img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .GOLImageGallery img {
+    width: 60%;
+  }
+}

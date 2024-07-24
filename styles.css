@@ -94,3 +94,26 @@ a {
     width: 60%;
   }
 }
+
+.LinearAlgebraCalcImgGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.LinearAlgebraCalcImgGallery img {
+    width: 50%; /* adjust the width based on your needs */
+    margin: 10px
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+   
+   /* Use media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+  .LinearAlgebraCalcImgGallery img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .LinearAlgebraCalcImgGallery img {
+    width: 60%;
+  }

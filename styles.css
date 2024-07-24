@@ -27,7 +27,7 @@ a {
   }
    
 .VelmaImageGallery img {
-    width: 50%; /* adjust the width based on your needs */
+    width: 30%; /* adjust the width based on your needs */
     margin: 10px
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }

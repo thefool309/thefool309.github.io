@@ -27,9 +27,10 @@ a {
   }
    
 .VelmaImageGallery img {
+    float: right;
     width: 30%; /* adjust the width based on your needs */
-    margin: 10px
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
    
    /* Use media queries to adjust the layout for different screen sizes */
@@ -52,9 +53,9 @@ a {
   }
   
 .NPCImageGallery img {
-    width: 50%; 
-    margin: 10px
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%; 
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
   
   /* Use media queries to adjust the layout for different screen sizes */
@@ -77,9 +78,9 @@ a {
   }
    
 .GOLImageGallery img {
-    width: 50%; /* adjust the width based on your needs */
-    margin: 10px
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%; /* adjust the width based on your needs */
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
    
    /* Use media queries to adjust the layout for different screen sizes */
@@ -102,8 +103,8 @@ a {
 }
 .LinearAlgebraCalcImgGallery img {
     width: 50%; /* adjust the width based on your needs */
-    margin: 10px
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
    
    /* Use media queries to adjust the layout for different screen sizes */
@@ -117,3 +118,4 @@ a {
   .LinearAlgebraCalcImgGallery img {
     width: 60%;
   }
+}

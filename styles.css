@@ -1,13 +1,8 @@
+/*General Styles*/
 body {
     background-color: rgb(64, 64, 68);
 }
 
-h1{
-    color: azure;
-    margin-left: 25px;
-    font-family:'Courier New', Courier, monospace;
-    text-decoration-line: underline;
-}
 p {
     color: azure;
     margin-left: 25px;
@@ -19,81 +14,164 @@ p {
 a {
     color:chartreuse
 }
+/*Title Styles*/
+.title h1{
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  text-decoration-line: underline;
+}
+.title ul {
+  background-color: black;
+  list-style-type: none;
+  display: grid;
+  align-items: center;
+  grid-template-columns: .3fr .3fr .3fr .3fr;
+  column-gap: 0px;
+}
+.title h2{
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+}
+.title ul {
+  background-color: black;
+  list-style-type: none;
+  text-align: center;
+  display: grid;
+  align-items: left;
+  grid-template-columns: .2fr .3fr .3fr .3fr;
+  column-gap: 0px;
+}
+
+
+
+/* Use media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+.NPCImageGallery img {
+  width: 40%;
+}
+}
+
+@media (max-width: 480px) {
+.NPCImageGallery img {
+ width: 60%;
+}
+}
+/*About me Styles*/
+.aboutMe h2 {
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  text-decoration-line: underline;
+}
+
+.aboutme-Container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr;
+  column-gap: 5px;
+}
 
 .VelmaImageGallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.VelmaImageGallery h2 {
+text-decoration-line: underline;
+}
+ 
 .VelmaImageGallery img {
-    float: right;
-    width: 80%; /* adjust the width based on your needs */
-    margin: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-   
-   /* Use media queries to adjust the layout for different screen sizes */
+  width: 60%; 
+  margin: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+ 
+ /* Use media queries to adjust the layout for different screen sizes */
 @media (max-width: 768px) {
-  .VelmaImageGallery img {
-    width: 40%;
-  }
+.VelmaImageGallery img {
+  width: 40%;
+}
 }
 
 @media (max-width: 480px) {
   .VelmaImageGallery img {
     width: 60%;
   }
+}
+/*NPC Styles*/
+.NPC h2 {
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  text-decoration-line: underline;
 }
 
 .NPCImageGallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-.NPCImageGallery img {
-    width: 40%; 
-    margin: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Use media queries to adjust the layout for different screen sizes */
-@media (max-width: 768px) {
-  .NPCImageGallery img {
-    width: 40%;
-  }
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
-@media (max-width: 480px) {
- .NPCImageGallery img {
-   width: 60%;
- }
- }
+.NPCImageGallery h2 {
+text-decoration-line: underline;
+}
+
+.NPCImageGallery img {
+width: 40%; 
+margin: 10px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/*Conway GOL Styles*/
+.ConwayGOL h2 {
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  text-decoration-line: underline;
+}
+
+.gol-container {
+  display: grid;
+  align-items: center;
+  grid-template-rows: .2fr .2fr;
+  row-gap: 5px;
+}
 
 .GOLImageGallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .GOLImageGallery img {
-    width: 40%; /* adjust the width based on your needs */
-    margin: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-   
-   /* Use media queries to adjust the layout for different screen sizes */
+  width: 40%; /* adjust the width based on your needs */
+  margin: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+ 
+ /* Use media queries to adjust the layout for different screen sizes */
 @media (max-width: 768px) {
-  .GOLImageGallery img {
-    width: 40%;
-  }
+.GOLImageGallery img {
+  width: 40%;
+}
 }
 
 @media (max-width: 480px) {
-  .GOLImageGallery img {
-    width: 60%;
-  }
+.GOLImageGallery img {
+  width: 60%;
+}
+}
+
+
+/*Linear Algebra Calc Styles*/
+.LinearAlgebraCalcPy h2 {
+  color: azure;
+  margin-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  text-decoration-line: underline;
 }
 
 .LinearAlgebraCalcImgGallery {
@@ -120,9 +198,7 @@ a {
   }
 }
 
-.aboutme-Container {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1.5fr;
-    column-gap: 5px;
-}
+
+
+
+

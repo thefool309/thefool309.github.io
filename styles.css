@@ -24,24 +24,20 @@ a {
 .title ul {
   background-color: black;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   align-items: center;
-  grid-template-columns: .3fr .3fr .3fr .3fr;
+  grid-template-columns: .5fr 1.5fr .5fr 1.5fr;
   column-gap: 0px;
+}
+.title li {
+  display: inline;
 }
 .title h2{
   color: azure;
   margin-left: 25px;
   font-family:'Courier New', Courier, monospace;
-}
-.title ul {
-  background-color: black;
-  list-style-type: none;
-  text-align: center;
-  display: grid;
-  align-items: left;
-  grid-template-columns: .2fr .3fr .3fr .3fr;
-  column-gap: 0px;
 }
 
 
@@ -69,7 +65,7 @@ a {
 .aboutme-Container {
   display: grid;
   align-items: center;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: .3fr .5fr;
   column-gap: 5px;
 }
 

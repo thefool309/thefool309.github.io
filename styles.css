@@ -43,21 +43,11 @@ a {
 
 
 /* Use media queries to adjust the layout for different screen sizes */
-@media (max-width: 768px) {
-.NPCImageGallery img {
-  width: 40%;
-}
-}
 
-@media (max-width: 480px) {
-.NPCImageGallery img {
- width: 60%;
-}
-}
+
 /*About me Styles*/
 .aboutMe h2 {
   color: azure;
-  margin-left: 25px;
   font-family:'Courier New', Courier, monospace;
   text-decoration-line: underline;
 }
@@ -100,7 +90,6 @@ text-decoration-line: underline;
 /*NPC Styles*/
 .NPC h2 {
   color: azure;
-  margin-left: 25px;
   font-family:'Courier New', Courier, monospace;
   text-decoration-line: underline;
 }
@@ -116,15 +105,26 @@ text-decoration-line: underline;
 }
 
 .NPCImageGallery img {
-width: 40%; 
+width: 80%; 
 margin: 10px;
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .NPCImageGallery img {
+    width: 40%;
+  }
+  }
+  
+@media (min-width: 480px) {
+  .NPCImageGallery img {
+    width: 60%;
+  }
 }
 
 /*Conway GOL Styles*/
 .ConwayGOL h2 {
   color: azure;
-  margin-left: 25px;
   font-family:'Courier New', Courier, monospace;
   text-decoration-line: underline;
 }

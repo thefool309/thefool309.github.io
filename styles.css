@@ -69,7 +69,7 @@ a {
 .aboutme-Container {
   display: grid;
   align-items: center;
-  grid-template-columns: .5fr .5fr;
+  grid-template-rows: .5fr .5fr;
   column-gap: 5px;
 }
 

@@ -1,200 +1,270 @@
-/*General Styles*/
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(64, 64, 68);
+  background-color: rgb(48, 48, 52);
+  color: #f1f1f1;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
 }
 
 p {
-    color: azure;
-    margin-left: 25px;
-    margin-right: 50px;
-    margin-top: 5px;
-    font-family:'Courier New', Courier, monospace;
+  margin: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #d1d1d1;
 }
 
 a {
-    color:chartreuse
+  color: #00ff88;
+  text-decoration: none;
 }
-/*Title Styles*/
-.title h1{
-  color: azure;
-  margin-left: 25px;
-  font-family:'Courier New', Courier, monospace;
-  text-decoration-line: underline;
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
+
+/* Title and Navbar Styles */
+.title h1 {
+  margin: 1.5rem 1rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Navbar */
 .title ul {
-  background-color: black;
-  list-style-type: none;
-  margin: 0;
+  background-color: #202024;
+  list-style: none;
   padding: 0;
-  display: grid;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  grid-template-columns: .5fr 1.5fr .5fr 1.5fr;
-  column-gap: 0px;
+  border-bottom: 2px solid #333;
 }
+
 .title li {
   display: inline;
-}
-.title h2{
-  color: azure;
-  margin-left: 25px;
-  font-family:'Courier New', Courier, monospace;
+  position: relative;
 }
 
-
-
-/* Use media queries to adjust the layout for different screen sizes */
-
-
-/*About me Styles*/
-.aboutMe h2 {
-  color: azure;
-  font-family:'Courier New', Courier, monospace;
-  text-decoration-line: underline;
+/* Menu Item Hover Effects */
+.title li a {
+  color: #f1f1f1;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.aboutme-Container {
-  display: grid;
-  align-items: center;
-  grid-template-rows: .3fr .5fr;
-  column-gap: 5px;
+.title li a:hover {
+  background-color: #00ff88;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
 
-.VelmaImageGallery {
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed; /* Fixed position */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #00ff88;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Menu Visibility for Mobile */
+.nav-menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.VelmaImageGallery h2 {
-text-decoration-line: underline;
-}
- 
-.VelmaImageGallery img {
-  width: 80%; 
-  margin: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
- 
- /* Use media queries to adjust the layout for different screen sizes */
-@media (max-width: 768px) {
-.VelmaImageGallery img {
-  width: 40%;
-}
-}
-
-@media (max-width: 480px) {
-  .VelmaImageGallery img {
-    width: 60%;
-  }
-}
-/*NPC Styles*/
-.NPC h2 {
-  color: azure;
-  font-family:'Courier New', Courier, monospace;
-  text-decoration-line: underline;
-}
-
-.NPCImageGallery {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.NPCImageGallery h2 {
-text-decoration-line: underline;
-}
-
-.NPCImageGallery img {
-width: 80%; 
-margin: 10px;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 768px) {
-  .NPCImageGallery img {
-    width: 40%;
-  }
-  }
-  
-@media (min-width: 480px) {
-  .NPCImageGallery img {
-    width: 60%;
-  }
-}
-
-/*Conway GOL Styles*/
-.ConwayGOL h2 {
-  color: azure;
-  font-family:'Courier New', Courier, monospace;
-  text-decoration-line: underline;
-}
-
-.gol-container {
-  display: grid;
+  justify-content: space-around;
   align-items: center;
-  grid-template-rows: .2fr .2fr;
-  row-gap: 5px;
 }
 
-.GOLImageGallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.nav-menu.active {
+  display: block;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: #202024;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect for dropdown */
+  border-radius: 5px; /* Rounded corners */
 }
 
-.GOLImageGallery img {
-  width: 40%; /* adjust the width based on your needs */
-  margin: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.nav-menu.active li {
+  margin: 1rem 0;
 }
- 
- /* Use media queries to adjust the layout for different screen sizes */
+
 @media (max-width: 768px) {
-.GOLImageGallery img {
-  width: 40%;
-}
+  .title ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
 }
 
-@media (max-width: 480px) {
-.GOLImageGallery img {
-  width: 60%;
-}
+h2 {
+  padding-top: 10px; /* Adds 10px padding above the heading */
 }
 
-
-/*Linear Algebra Calc Styles*/
-.LinearAlgebraCalcPy h2 {
-  color: azure;
-  margin-left: 25px;
-  font-family:'Courier New', Courier, monospace;
-  text-decoration-line: underline;
+/* Button Styles */
+button {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 255, 136, 0.5);
 }
 
+button:hover {
+  background-color: #00e67a;
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+}
+
+/* Image Gallery Styles */
+.VelmaImageGallery,
+.NPCImageGallery,
+.GOLImageGallery,
 .LinearAlgebraCalcImgGallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
+
+.VelmaImageGallery img,
+.NPCImageGallery img,
+.GOLImageGallery img,
 .LinearAlgebraCalcImgGallery img {
-    width: 50%; /* adjust the width based on your needs */
-    margin: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-   
-   /* Use media queries to adjust the layout for different screen sizes */
-@media (max-width: 768px) {
-  .LinearAlgebraCalcImgGallery img {
-    width: 40%;
-  }
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.VelmaImageGallery img:hover,
+.NPCImageGallery img:hover,
+.GOLImageGallery img:hover,
+.LinearAlgebraCalcImgGallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+}
+
+/* Responsive Design */
 @media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
   .LinearAlgebraCalcImgGallery img {
-    width: 60%;
+    max-width: 80%;
   }
 }
 
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.6rem;
+  }
 
+  p {
+    font-size: 1rem;
+  }
 
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 60%;
+  }
+}
 
+@media (min-width: 1025px) and (max-width: 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
 
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 30%;
+  }
+}

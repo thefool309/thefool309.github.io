@@ -86,10 +86,7 @@ a:focus {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  position: fixed; /* Fixed position */
-  top: 20px; /* Distance from the top */
-  right: 20px; /* Distance from the right */
-  z-index: 1000; /* Ensure it stays on top */
+  margin-left: auto;
 }
 
 .hamburger div {
@@ -108,34 +105,39 @@ a:focus {
 }
 
 .nav-menu.active {
-  display: block;
-  flex-direction: column;
+  display: flex; /* Changed to flex */
+  flex-direction: column; /* Stack items vertically */
   position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
+  top: 50px; /* Adjust this if needed */
+  left: 10px; /* Give some space from the left */
+  right: 10px; /* Give some space from the right */
   background-color: #202024;
   padding: 1rem;
+  border-radius: 5px; /* Add border radius for aesthetics */
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect for dropdown */
-  border-radius: 5px; /* Rounded corners */
 }
 
 .nav-menu.active li {
-  margin: 1rem 0;
+  margin: 0.5rem 0; /* Reduce margin for better stacking */
+  text-align: center; /* Center align text */
 }
 
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
   .title ul {
-    display: none;
+    display: none; /* Hide original menu */
   }
 
   .hamburger {
-    display: flex; /* Show hamburger on mobile */
+    display: flex; /* Show hamburger */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu by default */
   }
 
   .nav-menu.active {
-    display: block;
+    display: flex; /* Show menu when active */
   }
 }
 

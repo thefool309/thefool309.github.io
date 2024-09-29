@@ -71,8 +71,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
-  position: relative;
-  border-radius: 5px; /* Add border-radius here for cleaner hover effect */
+  border-radius: 5px; /* Uniform rounded corners */
 }
 
 .title li a:hover {
@@ -118,12 +117,9 @@ a:focus {
 }
 
 .nav-menu.active li {
-  margin: 0.5rem 0; /* Reduce margin for better stacking */
+  margin: 0; /* Remove margin between items */
   text-align: center; /* Center align text */
-}
-
-.nav-menu.active li a {
-  border-radius: 5px; /* Add border radius for the active menu items */
+  width: 100%; /* Ensure items take full width */
 }
 
 /* Mobile Menu Styles */
@@ -224,4 +220,53 @@ button:focus {
   }
 }
 
-@
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .VelmaImageGallery img,
+  .NPCImageGallery img,
+  .GOLImageGallery img,
+  .LinearAlgebraCalcImgGallery img {
+    max-width: 30%;
+  }
+}

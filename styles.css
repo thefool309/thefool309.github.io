@@ -4,15 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: rgb(48, 48, 52);
   color: #f1f1f1;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   padding: 20px;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* Typography */
@@ -23,51 +20,59 @@ h1, h2 {
 h1 {
   font-size: 2.5rem;
   color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 1.8rem;
+  color: #00ff88;
+  margin-top: 20px;
+}
+
+/* Paragraph Styles */
 p {
   margin: 1rem 1.5rem;
   font-size: 1rem;
   color: #d1d1d1;
 }
 
+/* Link Styles */
 a {
   color: #00ff88;
   text-decoration: none;
 }
-
 a:hover,
 a:focus {
   text-decoration: underline;
 }
 
 /* Title and Navbar Styles */
-.title h1 {
-  margin: 1.5rem 1rem;
-  text-decoration: underline;
+.title {
   text-align: center;
+}
+.title h1 {
+  text-decoration: underline;
 }
 
 /* Navbar */
 .title ul {
   background-color: #202024;
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 2px solid #333;
+  justify-content: center; /* Center the navbar */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .title li {
-  display: inline;
-  position: relative;
+  margin: 0 20px; /* Space between items */
 }
 
-/* Menu Item Hover Effects */
 .title li a {
   color: #f1f1f1;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px; /* Increased padding */
   text-transform: uppercase;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -82,44 +87,44 @@ a:focus {
 
 /* Hamburger Menu */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack bars vertically */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-left: auto; /* Align to the right */
+  z-index: 1001; /* Keep it on top */
 }
 
 .hamburger div {
-  width: 30px;
-  height: 3px;
-  background-color: #00ff88;
-  margin: 5px;
-  transition: all 0.3s ease;
+  width: 30px; /* Width of each bar */
+  height: 3px; /* Height of each bar */
+  background-color: #00ff88; /* Hamburger bar color */
+  margin: 5px; /* Space between bars */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
 /* Menu Visibility for Mobile */
 .nav-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center items */
   align-items: center;
 }
 
 .nav-menu.active {
-  display: flex; /* Changed to flex */
+  display: flex; /* Display when active */
   flex-direction: column; /* Stack items vertically */
   position: absolute;
-  top: 50px; /* Adjust this if needed */
-  left: 10px; /* Give some space from the left */
-  right: 10px; /* Give some space from the right */
+  top: 60px; /* Adjust position */
+  left: 10px;
+  right: 10px;
   background-color: #202024;
   padding: 1rem;
-  border-radius: 5px; /* Add border radius for aesthetics */
-  z-index: 1000;
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1000; /* Above other elements */
 }
 
 .nav-menu.active li {
-  margin: 0; /* Remove margin between items */
+  margin: 5px; /* Remove margin between items */
   text-align: center; /* Center align text */
-  width: 100%; /* Ensure items take full width */
 }
 
 /* Mobile Menu Styles */
@@ -141,33 +146,47 @@ a:focus {
   }
 }
 
+/* Section Headings */
 h2 {
   padding-top: 10px; /* Adds 10px padding above the heading */
 }
 
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
 /* Button Styles */
 button {
-  background-color: #00ff88;
+  background-color: #00ff88; /* Default background color */
   color: #000;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.5rem; /* Consistent padding */
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px; /* Smooth rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 255, 136, 0.5);
+  display: inline-block; /* Treat buttons like inline-block elements */
+  text-align: center; /* Center text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
+/* Hover Effect */
 button:hover {
-  background-color: #00e67a;
-  transform: translateY(-2px);
+  background-color: #00e67a; /* Slightly darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Focus Effect */
 button:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.8); /* Focus shadow effect */
 }
 
 /* Image Gallery Styles */
@@ -202,6 +221,13 @@ button:focus {
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
 }
 
+/* Profile Image Styles */
+.profile-img {
+  border: 5px solid #00ff88; /* Green border for profile image */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   h1, h2 {
@@ -228,7 +254,7 @@ button:focus {
   p {
     font-size: 1rem;
   }
-
+  
   .VelmaImageGallery img,
   .NPCImageGallery img,
   .GOLImageGallery img,

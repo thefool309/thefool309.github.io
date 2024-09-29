@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Velma's Online Portfolio</title>
-        <meta name="description" content="This is Velma Smith's Portfolio. A compilation of examples of work I have done so far.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <div class="title">
-            <h1>Velma's Online Portfolio</h1>
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul class="nav-menu">
-                <li><h2><a href="index.html">Home</a></h2></li>
-                <li><h2><a href="GOL.html">Conways's Game of Life</a></h2></li>
-                <li><h2><a href="NPC.html">NPC</a></h2></li>
-                <li><h2><a href="LinearAlgebra.html">Linear Algebra Calculator</a></h2></li>
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Velma's Online Portfolio</title>
+    <meta name="description" content="This is Velma Smith's Portfolio. A compilation of examples of work I have done so far.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Velma's Online Portfolio</h1>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="aboutMe">
+        <ul class="nav-menu">
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='GOL.html'">Conway's Game of Life</button></li>
+            <li><button onclick="location.href='NPC.html'">NPC</button></li>
+            <li><button onclick="location.href='LinearAlgebra.html'">Linear Algebra Calculator</button></li>
+        </ul>
+    </header>
+    <main>
+        <section class="aboutMe">
             <h2>Who is Velma?</h2>
-            <div class="aboutme-Container">
             <div class="VelmaImageGallery">
-                <img src="img/Vel/velma.jpg" alt="An image of a girl with curly hair and a green shirt">
+                <img src="img/Vel/velma.jpg" alt="An image of a girl with curly hair and a green shirt" class="profile-img">
             </div>
-            <div class="VelmaText">
+            <div class="VelmaText" id="VelmaText">
                 <p>
                     Hello! I'm a passionate software engineer with a strong foundation in C++ and Python, and added experience in C#, HTML, and CSS.
                     My dream is to carve out a niche in the world of either Game Development, Robotics, or Possibly another field if I found the right fit. 
@@ -41,8 +41,11 @@
                     Join me as I continue to explore, create, and find my niche.
                 </p>
             </div>
-            </div>
-        </div>  
-        <script src="scripts.js"></script>
+        </section>
+    </main>  
+    <footer>
+        <p>&copy; 2024 Velma Smith. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

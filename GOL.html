@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Velma's Online Portfolio</title>
     <meta name="description" content="This is Velma Smith's Portfolio. A compilation of examples of work I have done so far.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>ConwayGOL</title>
 </head>
 <body>
-    <div class="title">
+    <header class="title">
         <h1>Velma's Online Portfolio</h1>
         <div class="hamburger" id="hamburger">
             <div></div>
@@ -16,34 +17,41 @@
             <div></div>
         </div>
         <ul class="nav-menu">
-            <li><h2><a href="index.html">Home</a></h2></li>
-            <li><h2><a href="GOL.html">Conways's Game of Life</a></h2></li>
-            <li><h2><a href="NPC.html">NPC</a></h2></li>
-            <li><h2><a href="LinearAlgebra.html">Linear Algebra Calculator</a></h2></li>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='GOL.html'">Conway's Game of Life</button></li>
+            <li><button onclick="location.href='NPC.html'">NPC</button></li>
+            <li><button onclick="location.href='LinearAlgebra.html'">Linear Algebra Calculator</button></li>
         </ul>
-    </div>
+    </header>
     
-    <div class="ConwayGOL">
-        <h2>Conway's Game Of Life (C++)</h2>
-        <div class="gol-container">
-            <div class="GOLbody">
-                <p>
-                    Conway’s game of life was a project that I built using the library wxWidgets for C++. 
-                    I built this in college for a class project and the source code is available upon request. 
-                    This shows a strong level of proficiency with libraries designed for GUI applications, as well as a strong understanding of the logical and mathematical principles behind the game.
-                    The GUI functions well with a customizable size of the grid and colors of the cells.
-                    You can toggle grid transparency and a Heads-Up Display as well.
-                    The settings are persistent showing an understanding of Object Oriented Programming and binary file I/O.
-                </p>
-            </div>    
-            <div class="GOLImageGallery">
-                <img src="img/gol/gol1.png" alt="A computer simulation of Conway's Game of Life">
-                <img src="img/gol/gol2.png" alt="A computer simulation of Conway's Game of Life">
-                <img src="img/gol/golAllGrids.png" alt="A computer simulation of Conway's Game of Life">
-                <img src="img/gol/golNoGrid.png" alt="A computer simulation of Conway's Game of Life">                
+    <main>
+        <section class="ConwayGOL">
+            <h2>Conway's Game Of Life (C++)</h2>
+            <div class="gol-container">
+                <div class="GOLbody">
+                    <p>
+                        Conway’s game of life was a project that I built using the library wxWidgets for C++. 
+                        I built this in college for a class project and the source code is available upon request. 
+                        This shows a strong level of proficiency with libraries designed for GUI applications, as well as a strong understanding of the logical and mathematical principles behind the game.
+                        The GUI functions well with a customizable size of the grid and colors of the cells.
+                        You can toggle grid transparency and a Heads-Up Display as well.
+                        The settings are persistent showing an understanding of Object Oriented Programming and binary file I/O.
+                    </p>
+                </div>    
+                <div class="GOLImageGallery">
+                    <img src="img/gol/gol1.png" alt="A computer simulation of Conway's Game of Life">
+                    <img src="img/gol/gol2.png" alt="A computer simulation of Conway's Game of Life">
+                    <img src="img/gol/golAllGrids.png" alt="A computer simulation of Conway's Game of Life">
+                    <img src="img/gol/golNoGrid.png" alt="A computer simulation of Conway's Game of Life">                
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Velma Smith. All rights reserved.</p>
+    </footer>
+    
     <script src="scripts.js"></script>
 </body>
 </html>

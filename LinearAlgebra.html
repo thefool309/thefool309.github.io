@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Velma's Online Portfolio</title>
     <meta name="description" content="This is Velma Smith's Portfolio. A compilation of examples of work I have done so far.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>LinearAlgebraCalc</title>
 </head>
 <body>
-    <div class="title">
+    <header class="title">
         <h1>Velma's Online Portfolio</h1>
         <div class="hamburger" id="hamburger">
             <div></div>
@@ -17,24 +17,32 @@
             <div></div>
         </div>
         <ul class="nav-menu">
-            <li><h2><a href="index.html">Home</a></h2></li>
-            <li><h2><a href="GOL.html">Conways's Game of Life</a></h2></li>
-            <li><h2><a href="NPC.html">NPC</a></h2></li>
-            <li><h2><a href="LinearAlgebra.html">Linear Algebra Calculator</a></h2></li>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='GOL.html'">Conway's Game of Life</button></li>
+            <li><button onclick="location.href='NPC.html'">NPC</button></li>
+            <li><button onclick="location.href='LinearAlgebra.html'">Linear Algebra Calculator</button></li>
         </ul>
-    </div>
-    <div class="LinearAlgebraCalcPy">
-        <h2>The Linear Algebra Calculator (Python)</h2>
-        <div class="LinearAlgebraCalcImgGallery">
-            <img src="img/coconut.jpg" alt="A filler image of a coconut">
-        </div>
-        <p>
-            Developed during my time in Linear Algebra through college, I created this program to help me check my work.
-            This program shows a strong understanding of the underlying mathematical principles as well as the numpy, scipy, and sympy libraries for python.
-            This application intakes either two 3X1 vectors or two matrices of user defined sizes.
-            It can perform many operations such as cross products, dot products, finding the angle, adding, subtracting and more. 
-        </p>
-    </div>
+    </header>
+    
+    <main>
+        <section class="LinearAlgebraCalcPy">
+            <h2>The Linear Algebra Calculator (Python)</h2>
+            <div class="LinearAlgebraCalcImgGallery">
+                <img src="img/coconut.jpg" alt="A filler image of a coconut">
+            </div>
+            <p>
+                Developed during my time in Linear Algebra through college, I created this program to help me check my work.
+                This program shows a strong understanding of the underlying mathematical principles as well as the numpy, scipy, and sympy libraries for Python.
+                This application intakes either two 3X1 vectors or two matrices of user-defined sizes.
+                It can perform many operations such as cross products, dot products, finding the angle, adding, subtracting, and more. 
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Velma Smith. All rights reserved.</p>
+    </footer>
+    
     <script src="scripts.js"></script>
 </body>
 </html>

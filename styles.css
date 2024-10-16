@@ -192,6 +192,7 @@ button:focus {
 /* Image Gallery Styles */
 .VelmaImageGallery,
 .NPCImageGallery,
+.NPCImageGallery a,
 .GOLImageGallery,
 .LinearAlgebraCalcImgGallery {
   display: flex;

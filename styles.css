@@ -234,7 +234,7 @@ nav-button:focus {
   width: 100%;
   max-width: 800px; /* Set a max width for larger screens */
   height: auto; /* Allow the height to adjust dynamically */
-  margin: 10px; /* Space between the text and video */
+  margin: 10px auto; /* Space between the text and video */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -283,9 +283,6 @@ nav-button:focus {
     max-width: 60%;
   }
 
-  .youtube-embed {
-    padding-top: 75%; /* Aspect ratio for a taller iframe on smaller screens */
-  }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {

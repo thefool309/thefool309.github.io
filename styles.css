@@ -234,7 +234,7 @@ nav-button:focus {
   width: 100%;
   max-width: 800px; /* Set a max width for larger screens */
   height: auto; /* Allow the height to adjust dynamically */
-  margin: 20px auto; /* Space between the text and video */
+  margin: 10px; /* Space between the text and video */
   overflow: hidden;
   display: flex;
   justify-content: center;

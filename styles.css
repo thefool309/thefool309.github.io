@@ -128,7 +128,7 @@ a:focus {
 }
 
 /* Mobile Menu Styles */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .title ul {
     display: none; /* Hide original menu */
   }
@@ -229,6 +229,24 @@ button:focus {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.youtube-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect ratio for 16:9 */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   h1, h2 {
@@ -261,6 +279,10 @@ button:focus {
   .GOLImageGallery img,
   .LinearAlgebraCalcImgGallery img {
     max-width: 60%;
+  }
+
+  .youtube-embed {
+    padding-top: 75%; /* Aspect ratio for a taller iframe on smaller screens */
   }
 }
 

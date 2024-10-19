@@ -295,6 +295,11 @@ button:focus {
     font-size: 1.8rem;
   }
 
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   .VelmaImageGallery img,
   .NPCImageGallery img,
   .GOLImageGallery img,
@@ -310,6 +315,11 @@ button:focus {
 
   h2 {
     font-size: 2rem;
+  }
+
+  p {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .VelmaImageGallery img,

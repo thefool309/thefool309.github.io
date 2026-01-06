@@ -37,3 +37,13 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Licensing
+
+### code
+
+licensed under [Apache v2.0](./LICENSE.txt)
+
+### images and other digital assets
+
+licensed under [CC BY 4.0](./LICENSE-CC.txt)

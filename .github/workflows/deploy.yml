@@ -9,6 +9,8 @@ permissions:
 
 jobs:
   build:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6.1.0
       - name: Build Site
-        run: | 
+        run: |
           npm install
           npm run build
       - name: Upload GitHub Pages Artifact

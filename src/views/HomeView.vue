@@ -30,9 +30,9 @@ import Tonberry from '../assets/Sprite-TonberryWithWaterForSharing.png'
         </p>
         <p>
           I have experience in C++, Java, and Python. I also have added experience, to a lesser
-          degree, in C#, Rust, Typescript and HTML/CSS. Beyond tech, I’m passionate about tabletop
-          role-playing games, open-world RPGs, painting miniatures, and playing stringed
-          instruments.
+          degree, in C#, Rust, MIPS ASM, x86-64 ASM, Typescript and HTML/CSS. Beyond tech, I’m
+          passionate about tabletop role-playing games, open-world RPGs, painting miniatures, and
+          playing stringed instruments.
         </p>
       </section>
     </section>

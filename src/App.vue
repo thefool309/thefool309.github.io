@@ -1,0 +1,132 @@
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
+<template>
+  <div class="app-container">
+    <header class="top-bar">
+      <div class="wrapper">
+        <!-- Logo and Name Section -->
+        <div class="brand">
+          <RouterLink :to="{ name: 'home' }"
+            ><img alt="My logo" class="logo" src="@/assets/jester-boi.png" height="60" width="60"
+          /></RouterLink>
+          <RouterLink :to="{ name: 'home' }">
+            <HelloWorld msg="thefool309" />
+          </RouterLink>
+        </div>
+
+        <!-- Navigation Section -->
+        <nav class="main-nav">
+          <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+          <RouterLink :to="{ name: 'proj-landing-page' }">Projects</RouterLink>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+      <RouterView />
+    </main>
+
+    <footer>
+      <p>&copy; 2026 thefool309. All rights reserved.</p>
+    </footer>
+  </div>
+</template>
+
+<style scoped>
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes full height of the screen */
+  width: 100%;
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes brand left and nav right */
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+
+  margin: 80px auto 0;
+  max-width: 1000px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img .logo {
+  display: block;
+}
+
+.main-nav {
+  font-size: 1rem;
+}
+
+.main-nav a {
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+  color: var(--color-hyperlink);
+  text-decoration: none;
+}
+
+.main-nav a:first-of-type {
+  border: 0;
+}
+
+.main-nav a.router-link-exact-active {
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+/* Ensure content doesn't hide behind the fixed bar */
+.content {
+  margin-top: 80px;
+  min-height: calc(100vh - 150px);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.brand a {
+  padding: 0;
+}
+.brand a:hover {
+  /* Reset hover effect for the logo and header bar*/
+  background-color: var(--color-background);
+}
+.brand img {
+  padding-top: 10%;
+}
+</style>

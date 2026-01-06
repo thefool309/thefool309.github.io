@@ -1,6 +1,6 @@
 # PortfolioSiteVue
 
-This template should help get you started developing with Vue 3 in Vite.
+This should be a good example and you could even take some of the components if you really wanted.
 
 ## Recommended IDE Setup
 

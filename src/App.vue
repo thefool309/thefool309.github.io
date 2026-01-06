@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+console.log('Welcome stranger :3')
+console.log(
+  "You've wandered into the console. A place most people don't really go. I assume you're a developer...",
+)
+console.log('I hope you like what you see O///O')
+console.log(
+  'I spent some time on this one and learned a lot in the process \n If you have any feedback, my contact through email is thefool309@gmail.com',
+)
 </script>
 
 <template>

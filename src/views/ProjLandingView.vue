@@ -5,42 +5,80 @@ import ProjectListing from '@/components/ProjectListing.vue'
 
 <template>
   <div class="proj-landing-page">
-    <div class="proj-landing-page" id="image">
-      <img src="../assets/jester-boi.png" height="300" width="300" />
+    <div id="image">
+      <img src="../assets/jester-2.png" height="400" width="400" />
     </div>
     <ul>
-      <RouterLink :to="{ name: 'life-leveling' }"
-        ><ProjectListing
-          heading="LifeLeveling"
-          content="A gamified self care experience for android"
-      /></RouterLink>
-      <RouterLink :to="{ name: 'pisage' }">
-        <ProjectListing
-          heading="pi_Sage"
-          content="A UI wrapper for nmap made w/ Typescript and Vue.js"
-        />
-      </RouterLink>
-      <RouterLink :to="{ name: 'fastapi' }">
-        <ProjectListing
-          heading="foolishFastAPI"
-          content="an example of a backend REST API made in python"
-        />
-      </RouterLink>
-      <RouterLink :to="{ name: 'smokingisbad' }">
-        <ProjectListing
-          heading="Smoking is bad mkay?"
-          content="A data visualization exercise done in python, using health data related to smoking"
-        ></ProjectListing>
-      </RouterLink>
+      <li>
+        <RouterLink :to="{ name: 'life-leveling' }"
+          ><ProjectListing
+            heading="LifeLeveling"
+            content="A gamified self care experience for android"
+        /></RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'pisage' }">
+          <ProjectListing
+            heading="pi_Sage"
+            content="A UI wrapper for nmap made w/ Typescript and Vue.js"
+          />
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'fastapi' }">
+          <ProjectListing
+            heading="foolishFastAPI"
+            content="an example of a backend REST API made in python"
+          />
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'smokingisbad' }">
+          <ProjectListing
+            heading="Smoking is bad mkay?"
+            content="A data visualization exercise done in python, using health data related to smoking"
+          ></ProjectListing>
+        </RouterLink>
+      </li>
     </ul>
   </div>
 </template>
 
 <style scoped>
+#image img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  justify-content: center;
+  padding-bottom: 0%;
+}
+
+.proj-landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  min-height: 10vh;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .proj-landing-page {
+    min-height: 20vh;
+  }
 }
 
 .proj-landing-page a {
@@ -62,23 +100,5 @@ ul {
 .proj-landing-page a:active {
   transform: translateY(0);
   box-shadow: none;
-}
-
-img {
-  align-items: center;
-}
-@media (min-width: 1024px) {
-  .proj-landing-page {
-    min-height: 20vh;
-    display: block;
-    align-items: center;
-  }
-}
-@media (max-width: 1024px) {
-  .proj-landing-page {
-    min-height: 10vh;
-    display: block;
-    align-items: center;
-  }
 }
 </style>

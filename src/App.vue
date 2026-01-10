@@ -30,6 +30,12 @@ console.log(
         <nav class="main-nav">
           <RouterLink :to="{ name: 'home' }">Home</RouterLink>
           <RouterLink :to="{ name: 'proj-landing-page' }">Projects</RouterLink>
+          <a
+            href="https://github.com/thefool309/thefool309.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Source</a
+          >
         </nav>
       </div>
     </header>
@@ -40,6 +46,19 @@ console.log(
 
     <footer>
       <p>&copy; 2026 thefool309. All rights reserved.</p>
+      <nav>
+        <p>
+          This
+          <a
+            href="https://github.com/thefool309/thefool309.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            >software</a
+          >
+          is licensed under the
+          <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache v2.0 License</a>
+        </p>
+      </nav>
     </footer>
   </div>
 </template>

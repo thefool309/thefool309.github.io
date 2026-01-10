@@ -13,6 +13,8 @@ import Tonberry from '../assets/Sprite-TonberryWithWaterForSharing.png'
             :src="Tonberry"
             alt="a pixel art image of a Tonberry holding a glass of water"
             title="Drink water! >:3c"
+            width="200"
+            height="200"
           />
         </div>
         <h2>I'm thefool309. Welcome to my corner of the internet.</h2>

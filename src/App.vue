@@ -96,6 +96,7 @@ console.log(
 .content {
   flex: 1;
 
+  width: 100%;
   margin: 80px auto 0;
   max-width: 1000px;
   padding: 0 2rem;
@@ -142,9 +143,14 @@ console.log(
 }
 
 footer {
+  margin-top: auto;
   text-align: center;
   padding: 2rem;
   border-top: 1px solid var(--color-border);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand a {
@@ -156,5 +162,11 @@ footer {
 }
 .brand img {
   padding-top: 10%;
+}
+
+@media (max-width: 400px) {
+  p {
+    max-width: 80%;
+  }
 }
 </style>

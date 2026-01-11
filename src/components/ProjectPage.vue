@@ -44,20 +44,20 @@ defineProps<{
     <div v-if="image1 && alt1" class="first-image">
       <img :src="image1" :alt="alt1" />
     </div>
-    <div class="content" id="first-content">
+    <div class="project-content" id="first-content">
       <p>{{ content1 }}</p>
     </div>
     <div v-if="image2 && alt2" class="second-image">
       <img :src="image2" :alt="alt2" />
     </div>
-    <div v-if="content2 && content2Head" class="content" id="second-content">
+    <div v-if="content2 && content2Head" class="project-content" id="second-content">
       <h2>{{ content2Head }}</h2>
       <p>{{ content2 }}</p>
     </div>
     <div v-if="image3 && alt3" class="third-image">
       <img :src="image3" :alt="alt3" />
     </div>
-    <div v-if="content3 && content3Head" class="content" id="third-content">
+    <div v-if="content3 && content3Head" class="project-content" id="third-content">
       <h2>{{ content3Head }}</h2>
       <p>{{ content3 }}</p>
     </div>
@@ -65,11 +65,33 @@ defineProps<{
 </template>
 
 <style scoped>
-.content {
-  min-height: 30vh;
-  display: grid;
-  align-items: center;
+.ProjectPage {
+  width: 100%;
 }
+
+.title,
+.project-content,
+.youtube-embed,
+.first-image,
+.second-image,
+.third-image {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2vh;
+}
+.project-content,
+.youtube-embed {
+  margin-bottom: 5vh;
+}
+
+.project-content {
+  flex-direction: column;
+}
+
 p {
   margin: auto;
   font-size: large;
@@ -90,38 +112,5 @@ h2 {
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   color: var(--color-heading);
-}
-.ImageGallery {
-  display: flex;
-  flex-wrap: wraps;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .VincentText {
-    min-height: 30vh;
-    min-width: 50vh;
-    display: flex;
-    align-items: baseline;
-  }
-}
-
-@media (max-width: 1024px) {
-  .title {
-    margin-left: 1.8rem;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 420px) {
-  h2 {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    color: var(--color-heading);
-  }
 }
 </style>

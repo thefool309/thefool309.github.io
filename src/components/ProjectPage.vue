@@ -69,48 +69,53 @@ defineProps<{
   width: 100%;
 }
 
-.title,
-.project-content,
-.youtube-embed,
-.first-image,
-.second-image,
-.third-image {
-  display: flex;
-  justify-content: center;
+.title {
+  margin: 1rem 0;
   text-align: center;
 }
 
-.title {
-  margin-bottom: 2vh;
-}
-.project-content,
-.youtube-embed {
-  margin-bottom: 5vh;
-}
-
 .project-content {
-  flex-direction: column;
+  width: 100%;
+  margin: 1.25rem 0;
 }
 
 p {
-  margin: auto;
-  font-size: large;
-  padding: 5px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
+
 h1 {
-  margin: auto;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-  color: var(--color-heading);
+  font-size: 1.5rem;
 }
+
 h2 {
-  margin: auto;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-  color: var(--color-heading);
+  font-size: 1.25rem;
+}
+
+.youtube-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.youtube-embed iframe {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.1rem;
+  }
+  .project-content {
+    margin: 2rem 0;
+  }
 }
 </style>

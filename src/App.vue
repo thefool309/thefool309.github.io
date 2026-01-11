@@ -99,11 +99,8 @@ console.log(
   width: 100%;
   margin: 80px auto 0;
   max-width: 1000px;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0 1rem;
+  display: block;
   text-align: center;
 }
 

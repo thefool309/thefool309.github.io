@@ -10,6 +10,38 @@ console.log('I hope you like what you see O///O')
 console.log(
   'I spent some time on this one and learned a lot in the process \n If you have any feedback, my contact through email is thefool309@gmail.com',
 )
+
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const isMenuOpen = ref(false)
+const menuRef = ref<HTMLElement | null>(null)
+const buttonRef = ref<HTMLElement | null>(null)
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const handleClickOutside = (event: MouseEvent) => {
+  if (!isMenuOpen.value) return
+
+  const target = event.target as Node
+
+  if (
+    menuRef.value &&
+    buttonRef.value &&
+    !menuRef.value.contains(target) &&
+    !buttonRef.value.contains(target)
+  ) {
+    isMenuOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('pointerdown', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', handleClickOutside)
+})
 </script>
 
 <template>
@@ -26,8 +58,18 @@ console.log(
           </RouterLink>
         </div>
 
+        <button
+          ref="buttonRef"
+          type="button"
+          class="hamburger"
+          aria-label="Toglle navigation"
+          @click="toggleMenu"
+        >
+          &#9776;
+        </button>
+
         <!-- Navigation Section -->
-        <nav class="main-nav">
+        <nav ref="menuRef" class="main-nav" :class="{ open: isMenuOpen }">
           <RouterLink :to="{ name: 'home' }">Home</RouterLink>
           <RouterLink :to="{ name: 'proj-landing-page' }">Projects</RouterLink>
           <a
@@ -164,6 +206,60 @@ footer {
 @media (max-width: 400px) {
   p {
     max-width: 80%;
+  }
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* Desktop nav stays normal */
+@media (min-width: 641px) {
+  .main-nav {
+    display: flex;
+  }
+}
+
+/* Mobile behavior */
+@media (max-width: 640px) {
+  .hamburger {
+    display: block;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.75rem 0;
+    width: 100%;
+    text-align: center;
+    border: none;
   }
 }
 </style>

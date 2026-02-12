@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -19,11 +19,6 @@ const router = createRouter({
           path: '',
           name: 'proj-landing-page',
           component: () => import('../views/ProjLandingView.vue'),
-        },
-        {
-          path: '/projects',
-          name: '',
-          component: () => import('../views/ComingSoonView.vue'),
         },
         {
           path: '/projects/life-leveling',
@@ -46,6 +41,11 @@ const router = createRouter({
           component: () => import('../views/SmokingIsBadView.vue'),
         },
       ],
+    },
+    {
+      path: '/contact',
+      name: 'contact-page',
+      component: () => import('@/views/ContactPageView.vue'),
     },
   ],
 })

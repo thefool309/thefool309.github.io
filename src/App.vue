@@ -78,6 +78,7 @@ onBeforeUnmount(() => {
             rel="noopener noreferrer"
             >Source</a
           >
+          <RouterLink :to="{ name: 'contact-page' }">Contact</RouterLink>
         </nav>
       </div>
     </header>

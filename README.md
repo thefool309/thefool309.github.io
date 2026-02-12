@@ -1,4 +1,4 @@
-# PortfolioSiteVue
+# thefool309.github.io
 
 This should be a good example and you could even take some of the components if you really wanted.
 
@@ -47,3 +47,5 @@ licensed under [Apache v2.0](./LICENSE.txt)
 ### images and other digital assets
 
 licensed under [CC BY 4.0](./LICENSE-CC.txt)
+
+the email icon on the '/contact' route is sourced and modified from a public domain icon I found on [SVGrepo](www.svgrepo.com/svg/477054/email-download)

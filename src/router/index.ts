@@ -40,6 +40,11 @@ const router = createRouter({
           name: 'smokingisbad',
           component: () => import('../views/SmokingIsBadView.vue'),
         },
+        {
+          path: '/projects/civ-sculptor',
+          name: 'civ-sculptor',
+          component: () => import('@/views/CivSculptorView.vue'),
+        },
       ],
     },
     {

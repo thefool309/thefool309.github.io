@@ -7,6 +7,7 @@ import ProjectPage from '@/components/ProjectPage.vue'
     <ProjectPage
       title="Smoking is Bad, Mkay?"
       content1="smoking-is-bad is a data analysis and visualization project created to showcase my skills with Jupyter Notebooks and common Python data science libraries. The project involves cleaning, analyzing, and visualizing datasets to communicate insights clearly through well-structured notebooks. It emphasizes readable analysis, effective visual storytelling, and reproducible workflows."
+      github_url="https://github.com/thefool309/smoking-is-bad-mkay"
     />
   </div>
 </template>

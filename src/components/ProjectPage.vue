@@ -67,7 +67,7 @@ import ImageLink from './ImageLink.vue'
       <p>{{ content3 }}</p>
     </div>
     <div class="github-link">
-      <h2>Github Link</h2>
+      <h2>GitHub Link</h2>
       <ImageLink src="/GitHub_Invertocat_White.png" width="150" height="150" :url="github_url" />
     </div>
   </div>

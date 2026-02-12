@@ -10,27 +10,27 @@ import ProjectListing from '@/components/ProjectListing.vue'
     </div>
     <ul>
       <li>
-        <RouterLink :to="{ name: 'life-leveling' }"
-          ><ProjectListing
-            heading="LifeLeveling"
-            content="A gamified self care experience for android"
-        /></RouterLink>
+        <RouterLink :to="{ name: 'civ-sculptor' }">
+          <ProjectListing
+            heading="civ-sculptor"
+            content="Hybrid Python/C++ civilization simulation engine"
+          />
+        </RouterLink>
       </li>
       <li>
         <RouterLink :to="{ name: 'pisage' }">
           <ProjectListing
-            heading="pi_Sage"
+            heading="Penguin_Sage"
             content="A UI wrapper for nmap made w/ Typescript and Vue.js"
           />
         </RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'fastapi' }">
-          <ProjectListing
-            heading="foolishFastAPI"
-            content="an example of a backend REST API made in python"
-          />
-        </RouterLink>
+        <RouterLink :to="{ name: 'life-leveling' }"
+          ><ProjectListing
+            heading="LifeLeveling"
+            content="A gamified self care experience for android"
+        /></RouterLink>
       </li>
       <li>
         <RouterLink :to="{ name: 'smokingisbad' }">

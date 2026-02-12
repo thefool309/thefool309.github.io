@@ -5,7 +5,7 @@ import ImageLink from '@/components/ImageLink.vue'
 <template>
   <div class="contact-container">
     <div class="contact-title">
-      <h1>Email Me!</h1>
+      <h1>Click The Icon to Email Me!</h1>
     </div>
     <div class="contact-image-gall">
       <ImageLink

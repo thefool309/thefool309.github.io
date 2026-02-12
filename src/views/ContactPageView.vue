@@ -36,7 +36,8 @@ import ImageLink from '@/components/ImageLink.vue'
 
 .contact-image-gall {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* we set this up to go in a row so that we
+                          can add more icons and they'll apear side by side */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

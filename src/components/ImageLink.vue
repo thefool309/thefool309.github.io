@@ -1,5 +1,5 @@
 <template>
-  <a v-if="url" :href="url" class="link-wrap"
+  <a v-if="url" :href="url" target="_blank" rel="noopener noreferrer" class="link-wrap"
     ><img
       :src="src"
       :alt="alt"
@@ -36,11 +36,11 @@ defineProps({
   },
   width: {
     type: [String, Number],
-    default: '150',
+    default: null,
   },
   height: {
     type: [String, Number],
-    default: '150',
+    default: null,
   },
   imgClass: {
     type: String,
@@ -52,7 +52,6 @@ defineProps({
 <style scoped>
 .link-wrap {
   display: inline-block;
-  overflow: hidden;
   background-color: transparent;
 }
 
@@ -63,16 +62,11 @@ defineProps({
 .base-image {
   display: block;
   max-width: 100%;
-  aspect-ratio: 1 / 1; /* ensures height scales with width */
-  object-fit: cover; /* fill container cropping if necessary */
-
-  border-radius: 8px; /* rounded corners */
   transition: transform 0.2s ease; /* smooth hover effect */
 }
 
-.base-image:hover {
+.link-wrap:hover .base-image {
   transform: scale(1.2) rotate(-5deg) translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
-  background: transparent;
+  background-color: transparent;
 }
 </style>

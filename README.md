@@ -48,4 +48,4 @@ licensed under [Apache v2.0](./LICENSE.txt)
 
 licensed under [CC BY 4.0](./LICENSE-CC.txt)
 
-the email icon on the '/contact' route is sourced and modified from a public domain icon I found on [SVGrepo](www.svgrepo.com/svg/477054/email-download)
+the [email](www.svgrepo.com/svg/477054/email-download) and [lock](https://www.svgrepo.com/svg/477066/lock) icon on the '/contact' route is sourced and modified from a public domain icon I found on [SVGrepo](www.svgrepo.com/)

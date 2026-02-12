@@ -5,7 +5,11 @@ import ImageLink from '@/components/ImageLink.vue'
 <template>
   <div class="contact-container">
     <div class="contact-title">
-      <h1>Click The Icon to Email Me!</h1>
+      <h1>Contact</h1>
+      <p>
+        the email icon is a mailto link to my email, and the lock icon is a link to my public pgp
+        key in case you wanted to encrypt the message
+      </p>
     </div>
     <div class="contact-image-gall">
       <ImageLink
@@ -14,6 +18,13 @@ import ImageLink from '@/components/ImageLink.vue'
         width="150"
         url="mailto:thefool309@gmail.com"
         alt="an incoming icon with an envelope and an arrow on the top of it"
+      />
+      <ImageLink
+        src="/lock.png"
+        url="https://keys.openpgp.org/search?q=thefool309@gmail.com"
+        height="150"
+        width="150"
+        alt="A lock icon"
       />
     </div>
   </div>
@@ -32,6 +43,10 @@ import ImageLink from '@/components/ImageLink.vue'
   font-size: 2rem;
   text-align: center;
   margin: 0;
+}
+
+.contact-title p {
+  font-size: 1.2rem;
 }
 
 .contact-image-gall {

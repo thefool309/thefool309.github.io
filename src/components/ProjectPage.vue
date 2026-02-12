@@ -12,20 +12,25 @@ defineProps<{
   alt2?: string
   image3?: string
   alt3?: string
-  url?: string
+  youtube_url?: string
+  github_url?: string
 }>()
+
+import ImageLink from './ImageLink.vue'
 </script>
 
 <template>
   <div class="ProjectPage">
     <div class="title">
-      <h1>{{ title }}</h1>
+      <a :href="github_url" target="_blank" rel="noopener noreferrer" class="header-link"
+        ><h1>{{ title }}</h1></a
+      >
     </div>
-    <div v-if="url" class="youtube-embed">
+    <div v-if="youtube_url" class="youtube-embed">
       <iframe
         width="560"
         height="315"
-        :src="url"
+        :src="youtube_url"
         title="YouTube video player"
         frameborder="0"
         allow="
@@ -61,6 +66,10 @@ defineProps<{
       <h2>{{ content3Head }}</h2>
       <p>{{ content3 }}</p>
     </div>
+    <div class="github-link">
+      <h2>Github Link</h2>
+      <ImageLink src="/GitHub_Invertocat_White.png" width="150" height="150" :url="github_url" />
+    </div>
   </div>
 </template>
 
@@ -91,6 +100,11 @@ h1 {
 
 h2 {
   font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.header-link:hover {
+  background-color: transparent;
 }
 
 .youtube-embed {

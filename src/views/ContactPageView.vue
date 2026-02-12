@@ -8,7 +8,13 @@ import ImageLink from '@/components/ImageLink.vue'
       <h1>Email Me!</h1>
     </div>
     <div class="contact-image-gall">
-      <ImageLink src="/email.png" height="150" width="150" url="mailto:thefool309@gmail.com" />
+      <ImageLink
+        src="/email.png"
+        height="150"
+        width="150"
+        url="mailto:thefool309@gmail.com"
+        alt="an incoming icon with an envelope and an arrow on the top of it"
+      />
     </div>
   </div>
 </template>
